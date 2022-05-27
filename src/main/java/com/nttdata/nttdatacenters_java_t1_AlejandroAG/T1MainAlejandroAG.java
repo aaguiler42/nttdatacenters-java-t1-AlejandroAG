@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 import com.nttdata.nttdatacenters_java_t1_AlejandroAG.game.Game;
 
+/**
+ * @author Alejandro Aguilera García
+ */
 class T1MainAlejandroAG {
 	public static void main(String[] args) {
 
@@ -11,8 +14,10 @@ class T1MainAlejandroAG {
 		int gamePoints;
 		int option;
 
+		// Scanner
 		Scanner sc = new Scanner(System.in);
 
+		// Menú opciones
 		do {
 
 			System.out.println("1.- For playing");
@@ -21,11 +26,13 @@ class T1MainAlejandroAG {
 
 			option = sc.nextInt();
 
+			// Validación de opción
 			while (option < 1 || option > 3) {
 				System.out.println("Please, enter a valid option");
 				option = sc.nextInt();
 			}
 
+			// Comprobación de opción
 			switch (option) {
 			case 2:
 				points = 0;
@@ -45,6 +52,7 @@ class T1MainAlejandroAG {
 
 		} while (option != 3);
 
+		// Cierre del Scanner
 		sc.close();
 
 	}
