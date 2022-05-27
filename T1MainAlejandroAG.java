@@ -15,8 +15,14 @@ class T1MainAlejandroAG {
 
       System.out.println("1.- For playing");
       System.out.println("2.- For start from zero");
-      System.out.println("3.- For finish");
+      System.out.println("3.- For exit");
+
       option = sc.nextInt();
+
+      while (option < 1 || option > 3) {
+        System.out.println("Please, enter a valid option");
+        option = sc.nextInt();
+      }
 
       switch(option){
         case 2:
