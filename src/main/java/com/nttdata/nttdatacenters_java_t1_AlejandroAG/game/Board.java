@@ -2,12 +2,18 @@ package com.nttdata.nttdatacenters_java_t1_AlejandroAG.game;
 
 /**
  * Clase board (tablero)
+ * 
  * @author Alejandro Aguilera García
  */
 public class Board {
 
+	// Ancho del tablero
 	private int width;
+
+	// Altura del tablero
 	private int height;
+
+	// Matriz del tablero
 	private char[][] board;
 
 	/**
@@ -111,6 +117,7 @@ public class Board {
 
 	/**
 	 * Método para el relleno del tablero
+	 * 
 	 * @return relleno del tablero
 	 */
 	public char getCoord(int x, int y) {
@@ -121,6 +128,7 @@ public class Board {
 
 	/**
 	 * Método para obtener la altura del tablero
+	 * 
 	 * @return altura del tablero
 	 */
 	public int getHeight() {
@@ -131,6 +139,7 @@ public class Board {
 
 	/**
 	 * Método toString para imprimir tablero
+	 * 
 	 * @return cadena con el tablero
 	 */
 	@Override
@@ -139,10 +148,15 @@ public class Board {
 		String str = "";
 
 		for (int i = 0; i < this.height; i++) {
+
 			for (int j = 0; j < this.width; j++) {
+
 				str += board[i][j];
+
 			}
+
 			str += "\n";
+
 		}
 
 		return str;
@@ -150,6 +164,7 @@ public class Board {
 
 	/**
 	 * Método toString para imprimir tablero con la bola
+	 * 
 	 * @return cadena con el tablero con la bola
 	 */
 	public String toString(int ballX, int ballY) {
